@@ -15,6 +15,13 @@
       "when": 1763149174884,
       "tag": "0001_supreme_runaways",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1763149994046,
+      "tag": "0002_cooing_gamora",
+      "breakpoints": true
     }
   ]
 }

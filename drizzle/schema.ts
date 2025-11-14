@@ -89,6 +89,15 @@ export const orders = mysqlTable("orders", {
     "completed",    // Concluído
     "cancelled"     // Cancelado
   ]).default("pending").notNull(),
+  paymentMethod: mysqlEnum("paymentMethod", [
+    "cash",         // Dinheiro
+    "credit_card",  // Cartão de Crédito
+    "debit_card",   // Cartão de Débito
+    "pix",          // PIX
+    "bank_transfer",// Transferência Bancária
+    "check",        // Cheque
+    "other"         // Outros
+  ]).notNull(),
   totalAmount: int("totalAmount").notNull(), // Total em centavos
   discount: int("discount").default(0).notNull(), // Desconto em centavos
   finalAmount: int("finalAmount").notNull(), // Total final em centavos

@@ -16,6 +16,16 @@ const statusLabels: Record<string, string> = {
   cancelled: "Cancelado"
 };
 
+const paymentMethodLabels: Record<string, string> = {
+  cash: "Dinheiro",
+  credit_card: "Cartão de Crédito",
+  debit_card: "Cartão de Débito",
+  pix: "PIX",
+  bank_transfer: "Transferência Bancária",
+  check: "Cheque",
+  other: "Outros"
+};
+
 interface OrderDetailsProps {
   id: number;
 }
@@ -102,6 +112,10 @@ export default function OrderDetails({ id }: OrderDetailsProps) {
                   </SelectContent>
                 </Select>
               </div>
+            </div>
+            <div>
+              <span className="text-sm font-medium">Forma de Pagamento:</span>
+              <p className="text-sm text-muted-foreground">{paymentMethodLabels[order.paymentMethod]}</p>
             </div>
             {order.deliveryDate && (
               <div>

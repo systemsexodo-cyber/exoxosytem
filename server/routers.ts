@@ -201,6 +201,7 @@ export const appRouter = router({
     create: protectedProcedure
       .input(z.object({
         customerId: z.number(),
+        paymentMethod: z.enum(["cash", "credit_card", "debit_card", "pix", "bank_transfer", "check", "other"]),
         items: z.array(z.object({
           productId: z.number(),
           productName: z.string(),
@@ -228,6 +229,7 @@ export const appRouter = router({
           customerId: input.customerId,
           userId: ctx.user.id,
           status: "pending",
+          paymentMethod: input.paymentMethod,
           totalAmount,
           discount: input.discount,
           finalAmount,

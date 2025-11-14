@@ -1,0 +1,1 @@
+ALTER TABLE `orders` ADD `paymentMethod` enum('cash','credit_card','debit_card','pix','bank_transfer','check','other') NOT NULL;

@@ -34,5 +34,13 @@
 ## Testes e Deploy
 - [x] Testar fluxo completo de criação de pedido
 - [x] Testar autenticação e permissões
-- [ ] Criar checkpoint para deploy
+- [x] Criar checkpoint para deploy
 - [x] Documentar configuração para VPS
+
+## Forma de Pagamento
+- [x] Adicionar campo paymentMethod ao schema de pedidos
+- [x] Atualizar API para aceitar forma de pagamento
+- [x] Adicionar seleção de forma de pagamento no formulário de novo pedido
+- [x] Exibir forma de pagamento nos detalhes do pedido
+- [x] Exibir forma de pagamento na listagem de pedidos
+- [x] Testar criação de pedido com forma de pagamento

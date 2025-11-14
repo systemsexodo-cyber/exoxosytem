@@ -22,6 +22,7 @@ interface OrderItem {
 export default function NewOrder() {
   const [, setLocation] = useLocation();
   const [customerId, setCustomerId] = useState<string>("");
+  const [paymentMethod, setPaymentMethod] = useState<string>("cash");
   const [items, setItems] = useState<OrderItem[]>([]);
   const [discount, setDiscount] = useState<number>(0);
   const [notes, setNotes] = useState<string>("");
@@ -91,6 +92,7 @@ export default function NewOrder() {
     
     createMutation.mutate({
       customerId: Number(customerId),
+      paymentMethod: paymentMethod as any,
       items,
       discount,
       notes: notes || undefined,
@@ -134,6 +136,24 @@ export default function NewOrder() {
                         {customer.name}
                       </SelectItem>
                     ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div>
+                <Label htmlFor="paymentMethod">Forma de Pagamento *</Label>
+                <Select value={paymentMethod} onValueChange={setPaymentMethod}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="cash">Dinheiro</SelectItem>
+                    <SelectItem value="credit_card">Cartão de Crédito</SelectItem>
+                    <SelectItem value="debit_card">Cartão de Débito</SelectItem>
+                    <SelectItem value="pix">PIX</SelectItem>
+                    <SelectItem value="bank_transfer">Transferência Bancária</SelectItem>
+                    <SelectItem value="check">Cheque</SelectItem>
+                    <SelectItem value="other">Outros</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
