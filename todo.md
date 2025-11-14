@@ -46,7 +46,12 @@
 - [x] Testar criação de pedido com forma de pagamento
 
 ## GitHub
-- [ ] Configurar Git no projeto
-- [ ] Vincular repositório remoto ao GitHub
-- [ ] Fazer push inicial do código
-- [ ] Verificar repositório no GitHub
+- [x] Configurar Git no projeto
+- [x] Vincular repositório remoto ao GitHub
+- [x] Fazer push inicial do código
+- [x] Verificar repositório no GitHub
+
+## Menu de Navegação
+- [x] Renomear "Page 1" e "Page 2" para nomes descritivos
+- [x] Adicionar ícones aos itens do menu
+- [x] Testar navegação entre páginas
