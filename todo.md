@@ -44,3 +44,9 @@
 - [x] Exibir forma de pagamento nos detalhes do pedido
 - [x] Exibir forma de pagamento na listagem de pedidos
 - [x] Testar criação de pedido com forma de pagamento
+
+## GitHub
+- [ ] Configurar Git no projeto
+- [ ] Vincular repositório remoto ao GitHub
+- [ ] Fazer push inicial do código
+- [ ] Verificar repositório no GitHub
